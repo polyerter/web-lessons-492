@@ -1,3 +1,65 @@
 body {
   font-size: 16px;
 }
+
+.page {
+}
+
+.text {
+  font-size: 22px;
+}
+
+.text-red {
+  color: #ff0000;
+}
+
+h1 {color: lightblue;} /*специфичность 0, 0, 0, 1*/
+em {color: silver;} /*специфичность 0, 0, 0, 1*/
+h1 em {color: gold;} /*специфичность: 0, 0, 0, 1 + 0, 0, 0, 1 = 0, 0, 0, 2*/
+div#main p.about {color: blue;} /*специфичность: 0, 0, 0, 1 + 0, 1, 0, 0 + 0, 0, 0, 1 + 0, 0, 1, 0 = 0, 1, 1, 2*/
+.sidebar {color: grey;} /*специфичность 0, 0, 1, 0*/
+#sidebar {color: orange;} /*специфичность 0, 1, 0, 0*/
+li#sidebar  {color: aqua;} /*специфичность: 0, 0, 0, 1 + 0, 1, 0, 0 = 0, 1, 0, 1*/
+
+.btn {
+  padding: 5px;
+  line-height: 15px;
+  border: 1px solid transparent;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-info {
+  background-color: #0dcaf0;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: #212529;
+}
+
+.btn-warning {
+  background-color: #ffca2c;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+}
+
+.block-info {
+  background-color: #0dcaf0;
+}
+
+.block-warning {
+  background-color: #ffca2c;
+}
+
+.block-secondary {
+  background-color: #6c757d;
+}
+
+.block-danger {
+  background-color: #dc3545;
+}
